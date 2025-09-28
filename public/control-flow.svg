@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .device { fill: #f8fafc; stroke: #475569; stroke-width: 2; }
+    .label { font-family: system-ui, -apple-system, sans-serif; fill: #1e293b; }
+    .flow { stroke: #64748b; stroke-width: 2; marker-end: url(#arrow); fill: none; }
+    .flow-label { font-family: system-ui, -apple-system, sans-serif; fill: #64748b; font-size: 12px; }
+    .input-label { font-family: system-ui, -apple-system, sans-serif; fill: #94a3b8; font-size: 10px; }
+  </style>
+  
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="white"/>
+  
+  <!-- Main Flow -->
+  <g>
+    <!-- Devices -->
+    <rect class="device" x="100" y="100" width="120" height="60" rx="8"/>
+    <rect class="device" x="100" y="200" width="120" height="60" rx="8"/>
+    <rect class="device" x="100" y="400" width="120" height="60" rx="8"/>
+
+    <rect class="device" x="300" y="100" width="120" height="60" rx="8"/>
+    <!-- <rect class="device" x="300" y="200" width="120" height="60" rx="8"/> -->
+    <rect class="device" x="300" y="300" width="120" height="60" rx="8"/>
+
+    <!-- <rect class="device" x="500" y="100" width="120" height="60" rx="8"/> -->
+    <rect class="device" x="500" y="200" width="120" height="60" rx="8"/>
+    <rect class="device" x="500" y="400" width="120" height="60" rx="8"/>
+    
+    <!-- Labels -->
+    <text class="label" x="160" y="135" text-anchor="middle" font-size="16">NORNS</text>
+    <text class="label" x="160" y="235" text-anchor="middle" font-size="16">BBOX</text>
+    <text class="label" x="160" y="435" text-anchor="middle" font-size="16">USER</text>
+
+    <text class="label" x="360" y="135" text-anchor="middle" font-size="16">GRID</text>
+    <text class="label" x="360" y="335" text-anchor="middle" font-size="16">TX6</text>
+
+    
+    <text class="label" x="560" y="235" text-anchor="middle" font-size="16">R4</text>
+    <text class="label" x="560" y="435" text-anchor="middle" font-size="16">ROOM</text>
+    
+    <!-- Connections -->
+    <path class="flow" d="M160 160 L160 200"/>
+    <path class="flow" d="M160 400 L160 260"/>
+    <path class="flow" d="M300 130 L220 130"/>
+    <path class="flow" d="M220 130 L330 300" style="stroke: #22c55e"/>
+    <path class="flow" d="M220 230 L310 300" style="stroke: #22c55e"/>
+    <path class="flow" d="M500 230 L410 300" style="stroke: #22c55e"/>
+    <path class="flow" d="M300 336 L190 260" style="stroke: #22c55e"/>
+    <path class="flow" d="M560 400 L560 260"/>
+    
+    <!-- Flow Labels -->
+    <text class="flow-label" x="50" y="185" text-anchor="start">MIDI START/STOP</text>
+    <text class="flow-label" x="480" y="180" text-anchor="middle">AUDIO</text>
+    <text class="flow-label" x="170" y="380" text-anchor="start">ARM RECORD</text>
+  </g>
+</svg>
