@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 import matter from 'gray-matter'
 import Image from 'next/image'
 
@@ -130,7 +131,7 @@ export default function PostList() {
                   />
                 </div>
               )}
-              <ReactMarkdown>{content}</ReactMarkdown>
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
               {metadata.instagram && (
                 <div className="flex justify-center my-8">
                   <blockquote 
